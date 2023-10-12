@@ -130,7 +130,7 @@ function slideUp(elem) {
     elem.classList.remove('nowPlayingBar-hidden');
 }
 
-function onPlayPauseClick() {
+export function onPlayPauseClick() {
     playbackManager.playPause(currentPlayer);
 }
 
@@ -155,13 +155,6 @@ function bindEvents(elem) {
     elem.querySelector('.stopButton').addEventListener('click', function () {
         if (currentPlayer) {
             playbackManager.stop(currentPlayer);
-        }
-    });
-
-    window.addEventListener('keydown', (event) => {
-        if (event.key === ' ' || event.key === 'Spacebar') {
-            event.preventDefault();
-            onPlayPauseClick();
         }
     });
 

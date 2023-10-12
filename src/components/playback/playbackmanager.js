@@ -3420,8 +3420,6 @@ class PlaybackManager {
                 Events.on(player, 'error', onPlaybackError);
                 Events.on(player, 'timeupdate', onPlaybackTimeUpdate);
                 Events.on(player, 'pause', onPlaybackPause);
-                Events.on(player, 'pause', handleSpacebarEvent)
-                // document.addEventListener('keydown', handleSpacebarEvent);  //eventListener for spacebar
                 Events.on(player, 'unpause', onPlaybackUnpause);
                 Events.on(player, 'volumechange', onPlaybackVolumeChange);
                 Events.on(player, 'repeatmodechange', onRepeatModeChange);
