@@ -527,6 +527,7 @@ export default function (options) {
      */
     function play() {
         if (swiperInstance.autoplay) {
+            console.log("im playing")
             swiperInstance.autoplay.start();
         }
     }
@@ -536,6 +537,7 @@ export default function (options) {
      */
     function pause() {
         if (swiperInstance.autoplay) {
+            console.log("im paused")
             swiperInstance.autoplay.stop();
         }
     }

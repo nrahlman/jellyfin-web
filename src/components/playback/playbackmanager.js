@@ -3283,6 +3283,8 @@ class PlaybackManager {
             });
         }
 
+
+
         function bindStopped(player) {
             if (enableLocalPlaylistManagement(player)) {
                 Events.off(player, 'stopped', onPlaybackStopped);
@@ -3368,6 +3370,8 @@ class PlaybackManager {
                 Events.on(player, 'error', onPlaybackError);
                 Events.on(player, 'timeupdate', onPlaybackTimeUpdate);
                 Events.on(player, 'pause', onPlaybackPause);
+                Events.on(player, 'pause', handleSpacebarEvent)
+                // document.addEventListener('keydown', handleSpacebarEvent);  //eventListener for spacebar
                 Events.on(player, 'unpause', onPlaybackUnpause);
                 Events.on(player, 'volumechange', onPlaybackVolumeChange);
                 Events.on(player, 'repeatmodechange', onRepeatModeChange);
@@ -3687,6 +3691,7 @@ class PlaybackManager {
 
         return [];
     }
+
 
     playPause(player = this._currentPlayer) {
         if (player) {
@@ -4032,3 +4037,5 @@ window.addEventListener('beforeunload', function () {
         console.error('error in onAppClose: ' + err);
     }
 });
+
+

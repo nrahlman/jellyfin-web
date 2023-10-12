@@ -158,6 +158,13 @@ function bindEvents(elem) {
         }
     });
 
+    window.addEventListener('keydown', (event) => {
+        if (event.key === ' ' || event.key === 'Spacebar') {
+            event.preventDefault();
+            onPlayPauseClick();
+        }
+    });
+
     playPauseButtons.forEach((button) => {
         button.addEventListener('click', onPlayPauseClick);
     });
@@ -792,4 +799,5 @@ document.addEventListener('viewbeforeshow', function (e) {
         }
     }
 });
+
 
