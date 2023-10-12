@@ -3333,8 +3333,6 @@ class PlaybackManager {
             });
         }
 
-
-
         function bindStopped(player) {
             if (enableLocalPlaylistManagement(player)) {
                 Events.off(player, 'stopped', onPlaybackStopped);
@@ -3739,7 +3737,6 @@ class PlaybackManager {
 
         return [];
     }
-
 
     playPause(player = this._currentPlayer) {
         if (player) {

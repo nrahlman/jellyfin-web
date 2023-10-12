@@ -130,7 +130,7 @@ function slideUp(elem) {
     elem.classList.remove('nowPlayingBar-hidden');
 }
 
-export function onPlayPauseClick() {
+function onPlayPauseClick() {
     playbackManager.playPause(currentPlayer);
 }
 
