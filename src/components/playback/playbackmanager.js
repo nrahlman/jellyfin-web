@@ -4082,5 +4082,3 @@ window.addEventListener('beforeunload', function () {
         console.error('error in onAppClose: ' + err);
     }
 });
-
-
