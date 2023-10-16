@@ -185,7 +185,9 @@ export function enable() {
             case 'MediaTrackNext':
                 inputManager.handleCommand('nexttrack');
                 break;
-
+            case 'Space':
+                inputManager.handleCommand('playpause');
+                break;
             default:
                 capture = false;
         }
